@@ -1,4 +1,13 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
+import Reveal from 'reveal'
 
-createApp(App).mount('#app')
+Vue.config.productionTip = false
+Vue.use(Reveal)
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
+
+
+
