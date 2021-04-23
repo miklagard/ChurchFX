@@ -1,11 +1,15 @@
 <template>
   <section>
-    <div class="rect">
-      Willkommen zu<br />
-      unserem Gottesdienst<br />
+    <div>
+      mit<br />
+      Pfarrer Dr. Ulrich Schöntube
     </div>
-    Ostersonntag<br />
-    4. April 2021
+
+    <div>
+      Musik:<br />
+      Kreiskantor Jörg Walter<br />
+      Frohnauer Kantatenchor und Kantorei
+    </div>
   </section>
 </template>
 
@@ -13,7 +17,7 @@
 import Reveal from 'reveal'
 
 export default {
-  name: "Cover",
+  name: "MitMuzik",
   mounted() {
     Reveal.initialize({
       transition: 'fade', // none/fade/slide/convex/concave/zoom
@@ -26,10 +30,6 @@ export default {
 </script>
 
 <style scoped>
-  .rect {
-    border: 7px solid #ffffff;
-  }
-
   .present {
     font-variant: small-caps !important;
   }

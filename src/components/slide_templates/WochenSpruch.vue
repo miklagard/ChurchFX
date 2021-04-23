@@ -1,11 +1,14 @@
 <template>
   <section>
     <div class="rect">
-      Willkommen zu<br />
-      unserem Gottesdienst<br />
+      WOCHENSPRUCH
     </div>
-    Ostersonntag<br />
-    4. April 2021
+
+    <div>
+      Also hat Gott die Welt geliebt, dass er seinen
+      eingeborenen Sohn gab, damit alle die an ihn glauben
+      nicht verloren werden, sondern das ewige Leben haben.
+    </div>
   </section>
 </template>
 
@@ -13,7 +16,7 @@
 import Reveal from 'reveal'
 
 export default {
-  name: "Cover",
+  name: "WochenSpruch",
   mounted() {
     Reveal.initialize({
       transition: 'fade', // none/fade/slide/convex/concave/zoom
@@ -28,9 +31,5 @@ export default {
 <style scoped>
   .rect {
     border: 7px solid #ffffff;
-  }
-
-  .present {
-    font-variant: small-caps !important;
   }
 </style>

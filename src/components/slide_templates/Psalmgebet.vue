@@ -1,19 +1,28 @@
 <template>
   <section>
     <div class="rect">
-      Willkommen zu<br />
-      unserem Gottesdienst<br />
+      {{ title }}
     </div>
-    Ostersonntag<br />
-    4. April 2021
+
+    <div>
+      {{ psalm }}
+    </div>
+    <div>
+      {{ eg }}
+    </div>
   </section>
 </template>
 
 <script>
-import Reveal from 'reveal'
+import Reveal from "reveal";
 
 export default {
-  name: "Cover",
+  name: "Psalmgebet",
+  props: [
+    'title',
+    'psalm',
+    'eg'
+  ],
   mounted() {
     Reveal.initialize({
       transition: 'fade', // none/fade/slide/convex/concave/zoom
@@ -28,9 +37,6 @@ export default {
 <style scoped>
   .rect {
     border: 7px solid #ffffff;
-  }
-
-  .present {
     font-variant: small-caps !important;
   }
 </style>

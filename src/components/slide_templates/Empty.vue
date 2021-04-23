@@ -1,19 +1,13 @@
 <template>
   <section>
-    <div class="rect">
-      Willkommen zu<br />
-      unserem Gottesdienst<br />
-    </div>
-    Ostersonntag<br />
-    4. April 2021
   </section>
 </template>
 
 <script>
-import Reveal from 'reveal'
+import Reveal from "reveal";
 
 export default {
-  name: "Cover",
+  name: "Empty",
   mounted() {
     Reveal.initialize({
       transition: 'fade', // none/fade/slide/convex/concave/zoom
@@ -26,11 +20,5 @@ export default {
 </script>
 
 <style scoped>
-  .rect {
-    border: 7px solid #ffffff;
-  }
 
-  .present {
-    font-variant: small-caps !important;
-  }
 </style>

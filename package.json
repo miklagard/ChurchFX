@@ -13,9 +13,11 @@
     "@vue/cli-service": "^4.5.12",
     "core-js": "^3.6.5",
     "eslint": "^7.24.0",
+    "highlight": "^0.2.4",
     "markup": "^0.0.4",
     "reveal": "^0.0.4",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.12",
+    "zoom": "^0.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
