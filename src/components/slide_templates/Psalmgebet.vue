@@ -1,14 +1,15 @@
 <template>
   <section>
     <div class="rect">
-      {{ title }}
+      <div v-for="(text, index) in top" v-bind:key="index">
+        {{ text }}
+      </div>
     </div>
 
     <div>
-      {{ psalm }}
-    </div>
-    <div>
-      {{ eg }}
+      <div v-for="(text, index) in below" v-bind:key="index">
+        {{ text }}
+      </div>
     </div>
   </section>
 </template>
@@ -19,9 +20,8 @@ import Reveal from "reveal";
 export default {
   name: "Psalmgebet",
   props: [
-    'title',
-    'psalm',
-    'eg'
+    'top',
+    'below',
   ],
   mounted() {
     Reveal.initialize({

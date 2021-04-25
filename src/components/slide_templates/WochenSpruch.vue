@@ -1,13 +1,15 @@
 <template>
   <section>
     <div class="rect">
-      WOCHENSPRUCH
+      <div v-for="(text, index) in top" v-bind:key="index">
+        {{ text }}
+      </div>
     </div>
 
     <div>
-      Also hat Gott die Welt geliebt, dass er seinen
-      eingeborenen Sohn gab, damit alle die an ihn glauben
-      nicht verloren werden, sondern das ewige Leben haben.
+      <div v-for="(text, index) in below" v-bind:key="index">
+        {{ text }}
+      </div>
     </div>
   </section>
 </template>
@@ -17,6 +19,7 @@ import Reveal from 'reveal'
 
 export default {
   name: "WochenSpruch",
+  props: ['top', 'below'],
   mounted() {
     Reveal.initialize({
       transition: 'fade', // none/fade/slide/convex/concave/zoom

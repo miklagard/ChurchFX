@@ -1,11 +1,15 @@
 <template>
   <section>
     <div class="rect">
-      Willkommen zu<br />
-      unserem Gottesdienst<br />
+      <div v-for="(text, index) in top" v-bind:key="index">
+        {{ text }}
+      </div>
     </div>
-    Ostersonntag<br />
-    4. April 2021
+    <div>
+      <div v-for="(text, index) in below" v-bind:key="index">
+        {{ text }}
+      </div>
+    </div>
   </section>
 </template>
 
@@ -14,6 +18,7 @@ import Reveal from 'reveal'
 
 export default {
   name: "Cover",
+  props: ['top', 'below'],
   mounted() {
     Reveal.initialize({
       transition: 'fade', // none/fade/slide/convex/concave/zoom

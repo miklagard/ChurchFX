@@ -1,14 +1,15 @@
 <template>
   <section>
     <div>
-      mit<br />
-      Pfarrer Dr. Ulrich Schöntube
+      <div v-for="(text, index) in top" v-bind:key="index">
+        {{ text }}
+      </div>
     </div>
 
     <div>
-      Musik:<br />
-      Kreiskantor Jörg Walter<br />
-      Frohnauer Kantatenchor und Kantorei
+      <div v-for="(text, index) in below" v-bind:key="index">
+        {{ text }}
+      </div>
     </div>
   </section>
 </template>
@@ -18,6 +19,7 @@ import Reveal from 'reveal'
 
 export default {
   name: "MitMuzik",
+  props: ['top', 'below'],
   mounted() {
     Reveal.initialize({
       transition: 'fade', // none/fade/slide/convex/concave/zoom

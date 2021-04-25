@@ -1,11 +1,15 @@
 <template>
   <section>
     <div class="rect">
-      {{ guest }}
+      <div v-for="(text, index) in top" v-bind:key="index">
+        {{ text }}
+      </div>
     </div>
 
     <div class="title">
-      {{ title }}
+      <div v-for="(text, index) in below" v-bind:key="index">
+        {{ text }}
+      </div>
     </div>
   </section>
 </template>
@@ -14,8 +18,8 @@
 export default {
   name: "Guest",
   props: [
-    'guest',
-    'title'
+    'top',
+    'below'
   ]
 }
 </script>
